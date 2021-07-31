@@ -49,14 +49,24 @@ function saludar(saludo) {
 
 // ejecutarProm()
 
-async function ejectAscynAwait() {
-  let saludo = await saludar('hola')
-  console.log(`[este es saludar]: ${saludo}`);
-  await saludar(saludo)
-  await saludar(saludo)
-  await saludar(saludo)
-  await saludar(saludo)
-  console.log(`[este es saludar]: ${saludo} final`);
+// async function ejectAscynAwait() {
+//   let saludo = await saludar('hola')
+//   console.log(`[este es saludar]: ${saludo}`);
+//   await saludar(saludo)
+//   await saludar(saludo)
+//   await saludar(saludo)
+//   await saludar(saludo)
+//   console.log(`[este es saludar]: ${saludo} final`);
+// }
+
+// ejectAscynAwait()
+async function ejecutar(){
+  try {
+    await saludar('hola2')
+  } catch (error) {
+    return new Error(error)
+  }
 }
 
-ejectAscynAwait()
+ejecutar()
+console.log(ejecutar().then(data => console.log(data)))
