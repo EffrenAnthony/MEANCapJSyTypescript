@@ -34,17 +34,29 @@ function saludar(saludo) {
 //   console.log(err)
 // })
 
-function ejecutarProm() {
-  saludar('hola')
-  .then(saludar)
-  .then(saludar)
-  .then(saludar)
-  .then(saludar)
-  .then(saludar)
-  .catch(err =>{
-      console.log(err)
-  })
+// function ejecutarProm() {
+//   saludar('hola')
+//   .then(saludar)
+//   .then(saludar)
+//   .then(saludar)
+//   .then(saludar)
+//   .then(saludar)
+//   .catch(err =>{
+//       console.log(err)
+//   })
+// }
+
+
+// ejecutarProm()
+
+async function ejectAscynAwait() {
+  let saludo = await saludar('hola')
+  console.log(`[este es saludar]: ${saludo}`);
+  await saludar(saludo)
+  await saludar(saludo)
+  await saludar(saludo)
+  await saludar(saludo)
+  console.log(`[este es saludar]: ${saludo} final`);
 }
 
-
-ejecutarProm()
+ejectAscynAwait()
