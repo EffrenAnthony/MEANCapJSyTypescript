@@ -16,7 +16,7 @@ let string1:string = '1'
   let boolArr:(boolean | Array<string>) = [] 
 // }
 
-function name2(nom:string, edad:number) {
+function name2(nom:string, edad:number):string {
   return `${nom} tiene ${edad} años`
 }
 
